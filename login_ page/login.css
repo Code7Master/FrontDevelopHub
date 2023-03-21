@@ -4,18 +4,18 @@
     object-fit: cover;
     margin: auto;
     display: block;
-    margin-top: 79px;
+    margin-top:79px ;
 }
 .title{
     font-size: 36px;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
     margin-top: 26.69px;
+
 }
 .container{
-
     width: 462px;
-    height: 342px;
+    height: 288px;
     margin: 39px auto;
     padding: 65px;
     background-color: #fff;
@@ -25,8 +25,8 @@
 label{
     font-size: 14px;
     font-family: 'Noto Sans KR', sans-serif;
-}
 
+}
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -39,11 +39,7 @@ input[type="password"] {
 
 
 }
-::placeholder{
-    font-size: 14px;
-    color: rgba(208, 208, 208, 1);
-}
-.Sign_up_btn{
+.Sign_in_btn{
     margin-top: 0px;
     width: 100%;
     padding: 15px;
@@ -54,17 +50,19 @@ input[type="password"] {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     color: #fff;
-    outline: none;
-}
-.Sign_up_btn:focus{
-    outline: none;
+    margin-top: 30px;
 }
 input:focus{
     outline: 2px solid #F5B50B;
-
 }
-.Sign_up_btn:hover{
+.Sign_in_btn:focus{
+    outline: none;
+}
+.Sign_in_btn:hover{
     background: linear-gradient(90deg, #e1a340 0%, #e16b3a 50%, #3a3a3a 100%);
 
 }
-
+::placeholder{
+    font-size: 14px;
+    color: rgba(208, 208, 208, 1);
+}
