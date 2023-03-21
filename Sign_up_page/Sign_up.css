@@ -63,8 +63,4 @@ input:focus{
     outline: 2px solid #F5B50B;
 
 }
-.Sign_up_btn:hover{
-    background: linear-gradient(90deg, #e1a340 0%, #e16b3a 50%, #3a3a3a 100%);
-
-}
 
