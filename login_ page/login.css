@@ -66,3 +66,41 @@ input:focus{
     font-size: 14px;
     color: rgba(208, 208, 208, 1);
 }
+.elucidation{
+    text-align: center;
+    margin-top:50px;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.font_color{
+    text-decoration: none;
+    color: rgba(245, 156, 25, 1);
+}
+.tag_box{
+    width: 384px;
+    height: 36px;
+    margin: auto;
+    border-radius: 10px;
+    border:2px solid #E1E1E1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  li {
+    padding-bottom: 3px;
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+a{
+    text-decoration: none;
+    color:rgba(245, 156, 25, 1);
+}
