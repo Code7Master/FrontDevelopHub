@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="./jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".inputs").keyup(function () {
+        if (this.value.length == this.maxLength) {
+          $(this).next('.inputs').focus();
+        }
+    });
+});
+</script>
+</head>
+<body>
+	<div style="margin:20px;"> 
+		<input type="text" class="inputs" maxlength=4>
+		<input type="text" class="inputs" maxlength=4>
+		<input type="text" class="inputs" maxlength=4>
+		<input type="text" class="inputs" maxlength=4>
+		<input type="text" class="inputs" maxlength=4>
+		<input type="text" class="inputs" maxlength=4>
+		<input type="text" class="inputs" maxlength=4>
+	</div>
+</html>
