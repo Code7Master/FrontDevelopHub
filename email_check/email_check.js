@@ -1,16 +1,5 @@
-function moveNext(input, nextInputID) {
-  if (input.value.length == input.maxLength) {
-    document.getElementById(nextInputID).focus();
-  }
-}
 
-function moveBack(input, backInputID) {
-  if (input.value.length == 0 || !input.value || event.keyCode == 8) {
-    document.getElementById(backInputID).focus();
-  }
-}
-
-/*
+\/*
 
 moveBack 함수 실행 대안 
 

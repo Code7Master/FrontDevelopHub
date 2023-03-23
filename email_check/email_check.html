@@ -20,18 +20,12 @@
         <form class="email_check_box" >
             <label for="email_check">Send an email.</label>
             <div class="input-container">
-
-
-
-
-
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this,'input2')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input1')" id="input1"> 
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input3'); moveBack(this,'input1')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input2')" id="input2" />
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this,'input4');  moveBack(this,'input2')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input3')" id="input3">
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this,'input5');  moveBack(this,'input3')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input4')" id="input4">
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this,'input6'); moveBack(this,'input4')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input5')" id="input5">
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveBack(this,'input5');moveBack(this,'input5')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input6')" id="input6">
-
+                <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input2')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input1')" id="input1"> 
+                <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input3'); moveBack(this, 'input1')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input1')" id="input2" />
+                <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input4'); moveBack(this, 'input2')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input2')" id="input3">
+                <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input5'); moveBack(this, 'input3')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input3')" id="input4">
+                <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input6'); moveBack(this, 'input4')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input4')" id="input5">
+                <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveBack(this, 'input5')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input5')" id="input6"> <!--여기 moveBack(this, 'input5')" 의 input 값이 잘못 되어 오루가 난 것이다.-->
             </div>
             <input type="submit" value="Verification" class="email_check_btn" >
         </form>
@@ -39,28 +33,20 @@
     <p class="elucidation">Hasn't the email been sent? <a href="/email_check/email_check.html" class="font_color">Resend email.</a></p>
 </body>
 <script>
-    function moveNext(input, nextInputID) {
-  if (input.value.length == input.maxLength) {
-    document.getElementById(nextInputID).focus();
-  }
-}
-
-function moveBack(input, backInputID) {
-  if (input.value.length === 0 || !input.value || event.keyCode === 8) {
-    document.getElementById(backInputID).focus();
-  }
-}
-
+    //let prevInputID = "input1";
+    function moveNext(input, nextInputID) {  // 함수 생성 input,nextInputID 매개변수 생성.
+        if (input.value.length == input.maxLength) { // input의 값의 길이가 input의 max길이 같을때 
+            //prevInputID = input.getAttribute('id');
+            document.getElementById(nextInputID).focus(); // 다음 inputID로 포커스를 이동.
+        }
+    }
+    function moveBack(input, prevInputID) { // 함수 생성 input,prevInputID 매개변수 생성
+        if (event.keyCode === 8 && input.value.length === 0) { // 키를 누룰때 이벤트 keycode가 아스키코드 bakspace이고 input 값의 길이가 0일때
+            console.log(input.getAttribute('id'), prevInputID); // 현재 자신으 input의 요소의 값을 console 찍고 이전의 prevINputID를 찍음 
+            document.getElementById(prevInputID).focus(); //
+        }
+    }
 </script>
 </html>
 
 
-<!--<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " onkeyup="moveNext(this,'input2')" id="input1">
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " onkeyup="moveNext(this,'input3')" id="input2" onkeyup="moveBack(this,'input1')"> 여기서 onkeyup 키보드에서 키를 누를때 발생하는 이벤트
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " onkeyup="moveNext(this,'input4')" id="input3" onkeyup="moveBack(this,'input2')"> 이므로 키를 누를때 땔대 동시에 이벤트가 발생하기 때문에 
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " onkeyup="moveNext(this,'input5')" id="input4" onkeyup="moveBack(this,'input3')"> moveNext,moveBack 함수가 동시에 호출되어서 잘 
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " onkeyup="moveNext(this,'input6')" id="input5" onkeyup="moveBack(this,'input4')">
-<input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); " id="input6" onkeyup="moveBack(this,'input5')">          
-
-
--->  
