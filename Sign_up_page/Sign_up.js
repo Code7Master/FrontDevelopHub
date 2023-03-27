@@ -1,25 +1,28 @@
-var  username = document.getElementById('username');
-var email = document.getElementById('email');
-var password = document.getElementById('password');
 
 function null_check(){
     var  username = document.getElementById('username');
 var email = document.getElementById('email');
 var password = document.getElementById('password');
+var sign_up = document.getElementById('sign_up_btn');
 
-if(username.value === ""){
-    return false;
-};
+// 버튼 비활성화 함수
+function disableButton(){
+    sign_up.disabled = true;
+}
 
-if(email.value === ""){
-    return false;
-};
+// 버튼 활성화 함수
+function enableButton(){
+    sign_up.disabled = false; 
+}
 
-if(password.value === ""){
-    return false;
-};
+if(username.value == "" && password.value == "" && email.value == ""){
 
-if(false)
+    disableButton();
+        
+} 
+    else {
+    enableButton();
+}
 
 
 }
