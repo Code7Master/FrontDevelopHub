@@ -26,6 +26,7 @@
                 <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input5'); moveBack(this, 'input3')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input3')" id="input4">
                 <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveNext(this, 'input6'); moveBack(this, 'input4')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input4')" id="input5">
                 <input type="text" maxlength="1" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1'); moveBack(this, 'input5')" onkeydown="if(event.keyCode === 8) moveBack(this, 'input5')" id="input6"> <!--여기 moveBack(this, 'input5')" 의 input 값이 잘못 되어 오루가 난 것이다.-->
+                <input >
             </div>
             <input type="submit" value="Verification" class="email_check_btn" >
         </form>

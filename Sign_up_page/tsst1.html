@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		/* 드롭다운 버튼 스타일링 */
+		.dropbtn {
+		  background-color: #4CAF50;
+		  color: white;
+		  padding: 12px;
+		  font-size: 16px;
+		  border: none;
+		  cursor: pointer;
+		  border-radius: 5px;
+		}
+
+		/* 드롭다운 메뉴 스타일링 */
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: #f1f1f1;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0)
+        }
+
+        .dropdown-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  border-bottom: 1px solid #ddd;
+	}
+
+
+/* 드롭다운 메뉴 표시 스타일링 */
+/* .dropdown:hover .dropdown-content { */
+  .show {
+  display: block;
+}
+
+.ex{
+  margin-top: 45px;
+}
+.ex1{
+  border-radius: 15px;
+width: 137px;
+height: 24px;
+border-radius: 9px;
+border: 1px solid #EBEBEB;
+}
+
+	/* 드롭다운 메뉴 표시 스타일링 */
+</style>
+</head>
+<body>
+	<div class="dropdown">
+	  <button class="dropbtn">Dropdown</button>
+	  <div class="dropdown-content">
+	    <a href="#">링크 1</a>
+	    <a href="#">링크 2</a>
+      <a href="#" class="ex"><button class="ex1">링크 3</button></a>
+	  </div>
+	</div>
+    <script>
+      // 드롭다운 버튼 요소 가져오기
+var dropdownBtn = document.querySelector(".dropbtn"); 
+
+// 드롭다운 버튼 클릭 이벤트 핸들러 함수
+function dropdownClick() {
+  var dropdownMenu = document.querySelector(".dropdown-content");
+  if (dropdownMenu.classList.contains("show")) { // 만약에 드롭다운 콘텐츠가 있으면 
+    dropdownMenu.classList.remove("show"); // "show"라는 calss를 지우고
+  } else {
+    dropdownMenu.classList.add("show"); // 없으면 class 추가
+  }
+}
+
+// 드롭다운 버튼 클릭 이벤트 리스너 등록
+dropdownBtn.addEventListener("click", dropdownClick); // 클릭 시 저 드롭다운클릭 함수를 호출
+
+// 윈도우 클릭 이벤트 핸들러 함수
+function windowClick(event) {
+  // 클릭된 요소가 드롭다운 버튼이 아니면 드롭다운 메뉴를 숨김
+  if (!event.target.matches(".dropbtn")) { // 드롭다운 버튼 말고 다른 버튼 클릭시  
+    var dropdownMenus = document.querySelectorAll(".dropdown-content"); // 드롭다운 콘텐츠 전체 선택
+    for (var i = 0; i < dropdownMenus.length; i++) { // 콘텐츠의 길이 만큼
+      var dropdownMenu = dropdownMenus[i]; // 콘텐츠 길이
+      if (dropdownMenu.classList.contains("show")) { // show라는 클래스가 있을시 
+        dropdownMenu.classList.remove("show"); // 다 지운다
+      }
+    }
+  }
+}
+
+// 윈도우 클릭 이벤트 리스너 등록
+window.addEventListener("click", windowClick); // 윈도우 클릭시  "윈도우 클릭"함수 호출 
+
+    </script>
+</body>
+</html>
+    

@@ -17,7 +17,7 @@
     <img src="/Sign_up_page/logo.png" class="logo_img">
     <h1 class="title">Sign up DevelopHub</h1>
     <div class="container">
-        <form class="sian_up_box" method="post"> 
+        <form class="sian_up_box" method="post" > 
             <label for="username">Username</label> <!---->
             <br><input type="text" id="username" name="username" placeholder="Enter Username" class="color"><br>
 
@@ -30,6 +30,35 @@
             <input type="submit" value="Sign  up" class="Sign_up_btn" id="sign_up_btn" null_check() >
         </form>
     </div>
-    <script src="/Sign_up_page/Sign_up.js"></script>
+    <script>
+        
+function null_check(){
+    var  username = document.getElementById('username');
+var email = document.getElementById('email');
+var password = document.getElementById('password');
+var sign_up = document.getElementById('sign_up_btn');
+
+// 버튼 비활성화 함수
+function disableButton(){
+    sign_up.disabled = true;
+}
+
+// 버튼 활성화 함수
+function enableButton(){
+    sign_up.disabled = false; 
+}
+
+if(username.value == "" && password.value == "" && email.value == ""){
+
+    disableButton();
+        
+} 
+    else {
+    enableButton();
+}
+
+
+}
+    </script>
 </body>
 </html>
