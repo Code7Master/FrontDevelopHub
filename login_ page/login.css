@@ -39,19 +39,6 @@ input[type="password"] {
 
 
 }
-.Sign_in_btn{
-    margin-top: 0px;
-    width: 100%;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    background: linear-gradient(223.17deg, #F5B50B 0%, #F57431 100%);
-    font-size: 16px;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    color: #fff;
-    margin-top: 30px;
-}
 input:focus{
     outline: 2px solid #F5B50B;
 }
@@ -100,4 +87,50 @@ input:focus{
 a{
     text-decoration: none;
     color:rgba(245, 156, 25, 1);
+}
+@media only screen and (min-width: 400px){
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Sign_in_btn{
+    margin-top: 0px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(223.17deg, #F5B50B 0%, #F57431 100%);
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 30px;
 }
