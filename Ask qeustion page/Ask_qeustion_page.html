@@ -6,20 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Ask qeustion page/Ask_qeustion_page.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Ask question page</title>
 </head>
 <body>
@@ -35,6 +23,7 @@
                         <li><a href="/Question page/Question_page.html" class="mini_font">Questions</a></li>
                         <li><button class="menu_btn">kim</button></li>    
                     </div>
+                </ul>
             </nav>
         </header>
         <section>
@@ -46,12 +35,11 @@
                 <h6 class="Title">Title</h6>
                 <p class="Help_text">Be specific and imagine you’re asking a question to another person.</p>
                 <input type="text" id="text" class="input_text">
-                <input type="submit" class="next_btn">NEXT</input>     
-           
+                <input type="submit" class="next_btn" value="NEXT" id="next_btn" onclick="document.getElementById('next_btn').focus"></input>     
             </div>
             <div class="Details_detail_box">
                 <h3 class="Details_detail_title">What are the details of your problem?</h3>
-                <p class="Details_detail_Help">Introduce the problem and expand on what you put in the title. Minimum 20 characters. Rich text modeMarkdown modeMarkdown with preview mode</p>
+                <p class="Details_detail_Help">Introduce the problem and expand on what you put in the title. Minimum 20 characters. Rich text modeMarkdown modeMarkdown with preview mode.</p>
                 <textarea class="Details_detail_text" rows="2" cols="5"></textarea>
                 <button class="Details_detail_btn">Review your question</button>
             </div>

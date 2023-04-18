@@ -1,0 +1,202 @@
+body{
+    margin: 0;
+}
+.logo_frame{
+    width: 100%;
+    background: linear-gradient(223.17deg, #F5B50B 0%, #F57431 100%);
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+.header_left{
+    float: left;
+    padding-left: 311px;
+    width: 30%;
+    height: 50px;
+}
+.header_right{
+    float: right;
+    padding-right: 115px;
+} 
+  nav li {
+    font-family: 'Noto Sans KR', sans-serif;
+    display: inline-block;
+  }
+
+.big_logo_font{
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    line-height: 32.69px;
+
+}
+.mini_font{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19.07px;
+    text-decoration: none;
+    color: white;
+}
+.logo_img{
+    width: 22.98px;
+    height: 25px;
+    margin-top: 12px;
+
+}
+.menu_btn{
+    width: 67px;
+    height: 24px;
+    border-radius: 15px;
+    border: 1.5px solid white;
+    color: white;
+    background-color:transparent;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 13px;
+}
+.sign_btn{
+    border-radius: 9px;
+    border: 1px solid rgba(235, 235, 235, 1);
+    width: 137px;
+    height: 24px;
+
+}
+.show{
+    display: block;
+}
+.header_left li{
+    margin: 0 10px;
+}
+.header_right li{
+    margin: 0 18px;
+}
+.main_btn{
+    width: 915px;
+    height: 140px;
+    border: 2px solid rgba(235, 235, 235, 1);
+    position: relative;
+    display: block;
+    margin: auto ;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+.post_question_title{
+    width: 915px;
+    height: 260px;
+    border: 3px solid rgba(235, 235, 235, 1);
+    border-radius: 10px;   
+}
+.title_part{
+    width: 916px;
+    height: 120px;
+    border-bottom: 3px solid #EBEBEB;
+}
+.case_box{
+    width: 208px;
+    height: 14px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.votes{
+    font-size: 10px;
+    line-height: 13.62px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.answer{
+    font-size: 10px;
+    line-height: 13.62px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.view{
+    font-size: 10px;
+    line-height: 13.62px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+h1{
+    display: block;
+    padding: 0;
+    text-align: center;
+    width: 382px;
+    height: 41px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40.86px;
+    margin: auto;
+}
+.great_hate{
+    display: inline-block;
+}
+.sete{
+    display: flex;
+    
+}
+.post_title_answer{
+    width: 915px;
+    height: 140px;
+    border: 2px solid rgba(235, 235, 235, 1);
+}
+.answer_UserName{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27.24px;
+    
+}
+.contents{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20.24px;
+    display: inline-block;
+
+}
+.case_contents{
+    display: flex;
+}
+.post_answer{
+    width: 915px;
+    height: 300px;
+    border: 2px solid rgba(235, 235, 235, 1);
+    border-radius: 9px;
+
+}
+.post_answer_name{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24.52px;
+
+}
+.answer_contents{
+    width: 863px;
+    height: 185px;
+    border-radius: 5px;
+    background-color: rgba(241, 241, 241, 1);
+
+}
+.post_answer_btn{
+    width: 114px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #F59C19;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.34px;
+
+}
+.up_arrow{
+    wid
+}

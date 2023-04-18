@@ -10,55 +10,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <title>DevelopHub</title>
 </head>
 <body>
-    <img src="/Sign_up_page/logo.png" class="logo_img">
     <h1 class="title">Sign up DevelopHub</h1>
     <div class="container">
-        <form class="sian_up_box" method="post" > 
-            <label for="username">Username</label> <!---->
+        <form class="sian_up_box"> 
+            <label for="username">Username</label>
             <br><input type="text" id="username" name="username" placeholder="Enter Username" class="color"><br>
 
             <label for="email">Email</label>
             <br><input type="email" id="email" name="email" placeholder="Enter Email" class="color"><br>
 
             <label for="password">Password</label>
-            <br><input type="password" id="Password" name="password" placeholder="Enter Password" class="color"><br>
+            <br><input type="password" id="password" name="password" placeholder="Enter Password" class="color"><br>
 
-            <input type="submit" value="Sign  up" class="Sign_up_btn" id="sign_up_btn" null_check() >
+            <input type="submit" value="Sign up" class="Sign_up_btn" id="sign_up_btn" onclick="data()">
         </form>
     </div>
     <script>
-        
-function null_check(){
-    var  username = document.getElementById('username');
-var email = document.getElementById('email');
-var password = document.getElementById('password');
-var sign_up = document.getElementById('sign_up_btn');
+    function data() {
+    // 입력된 값을 가져옴
+    var username = document.getElementById("username").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+  
+    // 서버로 보낼 데이터를 JSON 형식으로 만듦
+    var data = {
+      username: username,
+      email: email,
+      password: password
+    };
+    
 
-// 버튼 비활성화 함수
-function disableButton(){
-    sign_up.disabled = true;
-}
-
-// 버튼 활성화 함수
-function enableButton(){
-    sign_up.disabled = false; 
-}
-
-if(username.value == "" && password.value == "" && email.value == ""){
-
-    disableButton();
-        
-} 
-    else {
-    enableButton();
-}
+    // axios 라이브러리를 사용하여 서버에 데이터 전송
+    axios.post('http://10.80.163.184:9190/auth/singup', data)
+      .then(function(response) {
+        // 성공적으로 데이터가 전송된 경우의 처리
+        console.log(response);
+      })
 
 
-}
+      .catch(function(error) {
+        // 데이터 전송이 실패한 경우의 처리
+        console.log(error);
+      });
+  }
+  
     </script>
 </body>
 </html>
