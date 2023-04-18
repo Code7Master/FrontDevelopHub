@@ -46,10 +46,12 @@
       email: email,
       password: password
     };
-    
-
     // axios 라이브러리를 사용하여 서버에 데이터 전송
-    axios.post('http://10.80.163.184:9190/auth/singup', data)
+    axios.post('http://10.80.163.184:9190/auth/singup', JSON.stringify(data),{
+        Headers : {
+            "Content-Type" : 'application/json',
+        },
+    })
       .then(function(response) {
         // 성공적으로 데이터가 전송된 경우의 처리
         console.log(response);
