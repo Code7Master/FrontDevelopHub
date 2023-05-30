@@ -37,6 +37,7 @@ ul{
     line-height: 19.07px;
     text-decoration: none;
     color: white;
+    margin-top: 20px;
 }
 .logo_img{
     width: 22.98px;
@@ -162,3 +163,46 @@ ul{
     color: white;
     background-color: transparent;
 }
+#All-Que{
+
+    width: 60%;
+    height: 17%;
+    border:2px solid #EBEBEB;
+    border-radius:10px;
+    position: absolute;
+    display: block;
+    margin-left:20%;
+    margin-top: 3%;
+    
+}
+#tatle-font{
+    font-size: 32px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #F59C19;
+    display: block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#Ask-btn{
+    float: right;
+    margin-top: 4%;
+    margin-right: 3%;
+}
+#main-content-tool{
+    position: absolute;
+    width: 915px;
+    height: 695px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+}
+body {
+    width: 100%;
+    height: 100%;
+  }
+  

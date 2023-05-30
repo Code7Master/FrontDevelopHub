@@ -1,6 +1,15 @@
+html{
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
 .logo_img{
-    width: 72px;
-    height: 78.31px;
+    width: 52px;
+    height: 56.31;
     object-fit: cover;
     margin: auto;
     display: block;
@@ -10,13 +19,15 @@
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
     margin-top: 26.69px;
+    display: block;
+    margin: auto;
 
 }
 .container{
-    width: 462px;
-    height: 288px;
-    margin: 39px auto;
-    padding: 65px;
+    width: 80vw;
+    height: 40vh;
+    margin: 8% auto;
+    padding: 10%;
     background-color: #fff;
     border-radius: 9px;
     box-shadow: 0px 15px 55px rgba(0, 0, 0, 0.15);
@@ -30,10 +41,10 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 95.5%;
-    padding: 10px;
+    padding: 2%;
     border: 1px solid rgba(241, 241, 241, 1);
     border-radius: 5px;
-    margin-bottom: 30px;
+    margin-bottom: 7%;
     background-color: rgba(241, 241, 241, 1);
 
 
@@ -87,43 +98,9 @@ a{
     text-decoration: none;
     color:rgba(245, 156, 25, 1);
 }
-@media only screen and (min-width: 400px){
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .Sign_in_btn{
-    margin-top: 0px;
     width: 100%;
-    padding: 15px;
+    padding: 4%;
     border-radius: 5px;
     border: none;
     background: linear-gradient(223.17deg, #F5B50B 0%, #F57431 100%);
@@ -131,5 +108,13 @@ a{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     color: #fff;
-    margin-top: 30px;
+    margin-top: 5%;
 }
+#Responsive-tools{
+    width: 70vw;
+    height: 80vh;
+    margin-right: 0;
+}
+
+
+

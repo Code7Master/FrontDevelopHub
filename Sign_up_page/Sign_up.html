@@ -30,7 +30,7 @@
             <label for="password">Password</label>
             <br><input type="password" id="password" name="password" placeholder="Enter Password" class="color"><br>
 
-            <input type="submit" value="Sign up" class="Sign_up_btn" id="sign_up_btn" onclick="data()">
+            <input type="button" value="Sign up" class="Sign_up_btn" id="sign_up_btn" onclick="data()">
         </form>
     </div>
     <script>
@@ -50,6 +50,7 @@
     axios.post('http://10.80.163.184:9190/auth/singup', JSON.stringify(data),{
         Headers : {
             "Content-Type" : 'application/json',
+            'cess-Control-Allow-Origin' : "*"
         },
     })
       .then(function(response) {
